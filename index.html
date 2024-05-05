@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calender</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(to right, #4b6cb7, #182848);
+        }
+
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="mx-3 mt-5 p-2 rounded-lg">
+        <div class="bg-white shadow-lg rounded-xl text-center w-full md:w-1/2 mx-auto">
+            <div class="px-6 py-4 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-700 text-white rounded-t-xl">
+                <div class="flex justify-between items-center gap-3 ">
+                    <button id="prevButton" class="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-transform transform btn">
+                        
+                    </button>
+                    <p class="text-lg font-bold" id="monthYear">
+                    </p>
+                    <button id="nextButton" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-transform transform btn">
+
+                    </button>
+                </div>
+            </div>
+            <div class="px-6 py-4 bg-gradient-to-t from-gray-200 via-gray-100 to-gray-200 overflow-x-auto">
+                <table class="w-full " id="calendarTable">
+                    <thead>
+                        <tr>
+                            <th class="border px-2 py-2 bg-gradient-to-b from-red-500 via-red-400 to-red-500 text-white">Sun</th>
+                            <th class="border px-2 py-2">Mon</th>
+                            <th class="border px-2 py-2">Tue</th>
+                            <th class="border px-2 py-2">Wed</th>
+                            <th class="border px-2 py-2">Thu</th>
+                            <th class="border px-2 py-2">Fri</th>
+                            <th class="border px-2 py-2">Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendarBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
